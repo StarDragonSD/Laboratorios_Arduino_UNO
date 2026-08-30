@@ -6,5 +6,5 @@
 
 # Potenciometro
 - Simulacion Tinkercad: https://www.tinkercad.com/things/g3C8gvyS85b-potenciometro
-- Simulacion Velxio: 
-- Simulacion Wokwi: 
+- Simulacion Velxio: https://velxio.dev/project/bc5c1663-b7b5-490e-9f41-180a65c77708
+- Simulacion Wokwi: https://wokwi.com/projects/473820811064982529

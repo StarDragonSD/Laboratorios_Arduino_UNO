@@ -7,5 +7,5 @@
 # Simulacion Interruptor ON/OFF
 
 - Simulador Tinkercad: https://www.tinkercad.com/things/dTOihcJWDSY-interruptor-onoff
-- Simulador Velxio:
+- Simulador Velxio: https://velxio.dev/project/f896b752-9558-48d8-a90f-56e00851cf6e
 - Simulador Wokwi: https://wokwi.com/projects/473814854624344065

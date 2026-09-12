@@ -12,4 +12,23 @@ void loop(){
   }
 }
 
+ON/OFF:
+int PULSADOR = 2;
+int LED = 3;
+int ESTADO = LOW;
 
+void setup (){
+  pinMode(PULSADOR, INPUT);    // pin 2 como entrada 
+  pinMode(LED, OUTPUT);  // pin 3 como salida
+}
+
+void loop(){
+  while(digitalRead(PULSADOR) == LOW) {  // Espero a que el pulsador se presione
+
+  }
+  ESTADO = digitalRead(LED);    //Lee estado del LED
+  digitalWrite(LED, !ESTADO);    // Escribe valor contrario
+  while(digitalRead(PULSADOR) == HIGH){ // antirebot
+
+  }
+}

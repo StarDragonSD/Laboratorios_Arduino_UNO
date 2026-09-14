@@ -1,1 +1,15 @@
+Primer codigo:
+int SENSOR;
+float TEMPERATURA;
 
+void setup(){
+  Serial.begin(9600);
+  //Entradas analogicas no requieren inicializacion
+}
+
+void loop(){
+  SENSOR = analogRead(A1);
+  TEMPERATURA = ((SENSOR * 5000.0) / 1023) / 10;
+  Serial.println(TEMPERATURA, 1);
+  delay(1000);
+}

@@ -6,4 +6,4 @@
 # Simulacion LM35 Segundo codigo
 - Simulacion Tinkercad: https://www.tinkercad.com/things/3zYhQbBe3px-lm352
 - Simulacion Velxio:
-- Simulacion Wokwi:
+- Simulacion Wokwi: https://wokwi.com/projects/475169830081135617

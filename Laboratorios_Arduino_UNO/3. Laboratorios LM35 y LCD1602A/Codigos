@@ -35,3 +35,41 @@ void loop(){
 
   Serial.println(SUMA/5.0, 1);
 }
+ LCD:
+#include <LiquidCrystal.h>
+
+// Pines de conexion: RS, EN, D4, D5, D6, D7
+LiquidCrystal lcd(7, 6, 5, 4, 3, 2);
+
+const int pinSensor = A0;
+
+void setup() {
+  lcd.begin(16, 2);
+  
+  // Dibujar el texto fijo una sola vez para eliminar el parpadeo
+  lcd.setCursor(0, 0);
+  lcd.print("Temp Actual:");
+}
+
+void loop() {
+  // Proceso de promediado de 10 lecturas para mayor estabilidad
+  float suma = 0;
+  for (int i = 0; i < 10; i++) {
+    int lecturaADC = analogRead(pinSensor);
+    // Para un LM35 FISICO a 5V: (lectura * 5000 mV / 1024) / 10 mV por °C
+    float temp = (lecturaADC * 500.0) / 1024.0; 
+    suma += temp;
+    delay(20);
+  }
+  
+  float tempPromedio = suma / 10.0;
+
+  // Actualizar solo el numero en la segunda linea
+  lcd.setCursor(0, 1);
+  lcd.print("  "); 
+  lcd.print(tempPromedio, 1); // Muestra 1 decimal
+  lcd.write(0xDF);             // Codigo del simbolo de grados (°)
+  lcd.print("C    ");          // Espacios para limpiar digitos sobrantes
+
+  delay(400); // Pausa de refresco de pantalla
+}
